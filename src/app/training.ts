@@ -4,7 +4,7 @@ export function add(a: number, b: number): number {
   return a + b;
 }
 
-const result = add(7, 18);
+const result: number = add(7, 18);
 console.log(result);
 
 // 4.Создал переменную uploadStatus, которая может быть только: "loading", "success", "error".
@@ -75,6 +75,6 @@ const users: User[] = [
   { id: '3', email: 'vadim@example.com', name: 'Vadim', age: 25 }
 ];
 
-const filteredUsers = users.filter(user => user.age !== undefined && user.age > 25);
+const filteredUsers: User[] = users.filter((user: User): boolean => user.age !== undefined && user.age > 25);
 
 console.log("Отфильтрованные пользователи:", filteredUsers);
